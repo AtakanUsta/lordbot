@@ -1,0 +1,2 @@
+# lordbot
+©Mustafa Eren

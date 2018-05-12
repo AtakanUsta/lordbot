@@ -88,4 +88,4 @@ if(cmd === `${prefix}yardım`) {
 
 
 
-bot.login(botconfig.token);
+bot.login(process.env.token);

@@ -36,7 +36,7 @@ module.exports.run = async (bot, message, args) => {
 
   setTimeout(function(){
     tomute.removeRole(muterole.id);
-    message.channel.send(` :white_check_mark:  <@${tomute.id}> `Adlı Kişinin Susturma Cezası Kalktı!` `);
+    message.channel.send(`:white_check_mark:  <@${tomute.id}> Adlı Kişinin Susturma Cezası Kalktı!`);
   }, ms(mutetime));
 
 

@@ -32,7 +32,7 @@ module.exports.run = async (bot, message, args) => {
   if(!mutetime) return message.reply(" :warning: `Lütfen Geçerli Bir Zaman Gir [ 1000 Milisaniye = 1 Saniye ]`");
 
   await(tomute.addRole(muterole.id));
-  message.reply(` :white_check_mark:  <@${tomute.id}> `Adlı Kişi` ${ms(ms(mutetime))} `Milisaniye Susturuldu` `);
+  message.reply(` :white_check_mark:  <@${tomute.id}> Adlı Kişi ${ms(ms(mutetime))} Milisaniye Susturuldu `);
 
   setTimeout(function(){
     tomute.removeRole(muterole.id);

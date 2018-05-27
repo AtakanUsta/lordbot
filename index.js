@@ -1,91 +1,106 @@
-const botconfig = require("./botconfig.json") ;
-const Discord = require("discord.js") ;
-
+const Discord = require("discord.js");
+const botconfig = require("./botconfig.json");
+const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
-
-bot.on("ready", async () => {
-
-  console.log(`${bot.user.username} Adli Oyuncu Suan Cevrimici `);
-  bot.user.setActivity("Mustafa Eren Kodluyor! - lord!yardım");
-});
+bot.commands = new Discord.Collection();
 
 
-bot.on("message", async message => {
+    fs.readdir("./komutlar/", (err, files) => {
+        if(err) console.log(err);
 
-  if(message.author.bot) return;
-  if(message.channel.type === "dm") return;
+        let jsfile = files.filter(f => f.split(".").pop() === "js")
+        if(jsfile.length <= 0) {
+            console.log("Komut Bulamıyorum Lütfen Kontrol Et");
+            return;
 
-  let prefix = botconfig.prefix;
-  let messageArray = message.content.split(" ");
-  let cmd = messageArray[0];
-  let args = messageArray.slice(1);
-
-  if(cmd === `${prefix}deneme`){
-    return message.channel.send("denemelendiniz :D");
-  }
-
-
-
-    if(message.content === prefix + "reboot" ) {
-        if(message.author.id === '327080554245652481') {
-          message.channel.send("Bot Yeniden Başlatılıyor!").then (msg => {
-          console.log("Bot Yeniden Başlatılıyor");
-          process.exit(0);
-        });
-        }else {
-
-          message.channel.send("Bu Yetkiye Sahip Değilsin!!");
         }
 
-    }
-
-
-if (message.content === "sa") {
-  message.reply("Aleyküm Selam Hoşgeldin")
-}
-
-if (message.content === "Sa") {
-  message.reply("Aleyküm Selam Hoşgeldin")
-}
-
-if (message.content === "sA") {
-  message.reply("Aleyküm Selam Hoşgeldin")
-}
-
-if (message.content === "SA") {
-  message.reply("Aleyküm Selam Hoşgeldin")
-}
-
-if (message.content === "Mustafa Eren Çok Yakışıklı") {
-  message.reply("Aynn Moruq")
-}
-
-if (message.content === "Selam") {
-  message.reply("Sanada Selam Yolcu :D")
-}
-
-if (message.content === "selam") {
-  message.reply("Sanada Selam Yolcu :D")
-}
-
-if(cmd === `${prefix}yardım`) {
-
-  let botembed = new Discord.RichEmbed()
-  .setDescription("Komutlar")
-  .setColor("#28ff19")
-  .addField("Kullanıcı Komutları","Yakında Eklenecek - Beta Aşamasında")
-  .addField("Eğlence Komutları","Yakında Eklenecek - Beta Aşamasında")
-  .addField("Diğer Komutlar","Yakında Eklenecek - Beta Aşamasında")
-  .addField("Yönetici Komutları","Yakında Eklenecek - Beta Aşamasında")
-  .addField("Bot Kurucu Komutları","lord!kurucukomut");
-
-  return message.channel.send(botembed);
-
-}
-
-
-});
+        jsfile.forEach((f, i) => {
+            let props = require(`./komutlar/${f}`);
+            console.log(`${f} Yüklendi`);
+            bot.commands.set(props.help.name, props);
+        });
+    });
 
 
 
-bot.login(process.env.token);
+
+ 
+
+
+    bot.on(`ready`,() => {
+        console.log(`${bot.user.username} Çevrimiçi Oldu!`);
+        bot.user.setActivity("Mustafa Eren Tarafından Kodlanıyor"),
+        bot.user.setActivity("Bot Beta Aşamasındadır!");
+    });
+
+    bot.on('message', async message => {
+        if(message.author.bot) return;
+        if(message.channel.type === "dm") return;
+
+        let prefix = botconfig.prefix;
+        let messageArray = message.content.split(" ");
+        let command = messageArray[0];
+        let args = messageArray.slice(1);
+
+
+
+                        if(message.content.startsWith("sa")) {
+                            message.channel.send(`:wave: Aleyküm Selam Hoş Geldin ${message.author}`)
+                        }
+                        if(message.content.startsWith("SA")) {
+                            message.channel.send(`:wave: Aleyküm Selam Hoş Geldin ${message.author}`)
+                        }
+                        if(message.content.startsWith("Sa")) {
+                            message.channel.send(`:wave: Aleyküm Selam Hoş Geldin ${message.author}`)
+                        }
+                        if(message.content.startsWith("sA")) {
+                            message.channel.send(`:wave: Aleyküm Selam Hoş Geldin ${message.author}`)
+                        }
+
+                        if(message.content.startsWith("selam")) {
+                            message.channel.send(`:wave: Sanada Selam ${message.author} Kod Adlı Dünyalı`)
+                        }
+                        if(message.content.startsWith("Selam")) {
+                            message.channel.send(`:wave: Sanada Selam ${message.author} Kod Adlı Dünyalı`)
+                        }
+                        if(message.content.startsWith("SELAM")) {
+                            message.channel.send(`:wave: Sanada Selam ${message.author} Kod Adlı Dünyalı`)
+                        }
+
+
+
+
+
+
+
+        let commandfile = bot.commands.get(command.slice(prefix.length));
+        if(commandfile) commandfile.run(bot,message,args);
+
+
+
+        if(!command.startsWith(prefix)) return;
+
+        if(message.content === 'ping') {
+            message.reply("ponglandın :D");
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    });
+
+
+
+
+
+    bot.login(botconfig.token);

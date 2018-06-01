@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
   if(!wUser) return message.reply(" :warning: `Kullanıyı Bulamıyorum` ");
   let warnlevel = warns[wUser.id].warns;
 
-  message.reply(` :white_check_mark:  ` <@${wUser.id}> ` Adlı Kullanıcı ` ${warnlevel} ` Uyarı Almıştır`);
+  message.reply(` :white_check_mark: ${wUser.user} Adlı Kullanıcı  ${warnlevel} Uyarı Almıştır `);
 
 }
 

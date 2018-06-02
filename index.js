@@ -71,21 +71,8 @@ bot.commands = new Discord.Collection();
         
         
         
-                                if(message.content.startsWith("oylama1")) {
-                            let kufuroylama = new Discord.RichEmbed()
-                            .setAuthor("Mustafa'nın Mükemmel Oylamaları")
-                            .setDescription("Oylamaya Katılın!")
-                            .setcolor("#42f44b")
-                            .setField("Serverdaki Küfür Yasağı Kaldırılsınmı?", "Evet : :thumbsup:")
-                            .setField(" ", "Hayır : :thumbsdown:")
-                            .setFooter("Not Hala Bazı Küfürler Yasak Olacak");
-                        
-                                    if(message.author === "327080554245652481") {
-                                        message.channel.send(kufuroylama);
-                                    }
-                                        
-                                    
-                                }
+        
+        
 
  
 

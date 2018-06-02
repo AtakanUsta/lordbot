@@ -80,7 +80,8 @@ bot.commands = new Discord.Collection();
                             .setFooter("Not Hala Bazı Küfürler Yasak Olacak");
                         
                                     if(message.author === "327080554245652481") {
-                                        message.channel.send(kufuroylama) 
+                                        message.channel.send("@here")
+                                        message.channel.send(kufuroylama)
                                     }
                                         
                                     

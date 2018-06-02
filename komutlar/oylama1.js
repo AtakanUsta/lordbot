@@ -11,25 +11,21 @@ module.exports.run = async (bot, message, args) => {
 
 
 
+let oylamaembed = new Discord.RichEmbed()
+            .setAuthor(message.author.username)
+            .setDescription("Adlı Yetkilinin Başlattığı [Küfür Kaldırılsınmı] Oylaması")
+            .setColor("#00ff08")
+            .addField("Sizce Sunucudan Küfür Kaldırılsınmı?", "Evet = :thumbsup")
+            .addField("ID'si :", "Hayır = :thumbsdown:");
+            
 
+        message.channel.send(oylamaembed);
+        
+        
 
         
         
-                                
-                            let kufuroylama = new Discord.RichEmbed()
-                            .setAuthor("Mustafa'nın Mükemmel Oylamaları")
-                            .setDescription("Oylamaya Katılın!")
-                            .setcolor("#42f44b")
-                            .setField("Serverdaki Küfür Yasağı Kaldırılsınmı?", "Evet : :thumbsup:")
-                            .setField(" ", "Hayır : :thumbsdown:")
-                            .setFooter("Not Hala Bazı Küfürler Yasak Olacak");
-                        
-                                    if(message.author === "327080554245652481") {
-                                        message.channel.send(kufuroylama);
-                                    
-                                        
-                                    
-                                }
+                               
 
 
 
@@ -39,5 +35,5 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-    name: "botkurucu"
+    name: "oylama1"
 }

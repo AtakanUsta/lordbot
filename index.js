@@ -71,7 +71,7 @@ bot.commands = new Discord.Collection();
         
         
         
-                                if(message.content.startsWith("SELAM")) {
+                                if(message.content.startsWith("oylama1")) {
                             let kufuroylama = new Discord.RichEmbed()
                             .setAuthor("Mustafa'nın Mükemmel Oylamaları")
                             .setcolor("#42f44b")

@@ -74,6 +74,7 @@ bot.commands = new Discord.Collection();
                                 if(message.content.startsWith("oylama1")) {
                             let kufuroylama = new Discord.RichEmbed()
                             .setAuthor("Mustafa'nın Mükemmel Oylamaları")
+                            .setDescription("Oylamaya Katılın!")
                             .setcolor("#42f44b")
                             .setField("Serverdaki Küfür Yasağı Kaldırılsınmı?", "Evet : :thumbsup:")
                             .setField(" ", "Hayır : :thumbsdown:")

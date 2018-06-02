@@ -15,8 +15,8 @@ let oylamaembed = new Discord.RichEmbed()
             .setAuthor(message.author.username)
             .setDescription("Adlı Yetkilinin Başlattığı [Küfür Kaldırılsınmı] Oylaması")
             .setColor("#00ff08")
-            .addField("Sizce Sunucudan Küfür Kaldırılsınmı?", "Evet = :thumbsup")
-            .addField("ID'si :", "Hayır = :thumbsdown:");
+            .addField("Sizce Sunucudan Küfür Kaldırılsınmı?", "Evet = :thumbsup:")
+            .addField(" ", "Hayır = :thumbsdown:");
             
 
         message.channel.send(oylamaembed);

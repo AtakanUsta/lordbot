@@ -73,7 +73,7 @@ bot.commands = new Discord.Collection();
             message.reply("Kod Adlı İnsan Evladı Hoşgeldin :wave:");
         }
                         if(message.content === 'yapay zeka') {
-            message.reply("Kod Adlı İnsan Evladı Hoşgeldin :wave:");
+             message.reply("Senin Gibi Bi İnsan Benim Gibi Zeki Bir Bota Karşı Çıkamaz Yakında Sonunuzu Getircek Olan Bu Robotlarla İyi Eğlenin Çünkü Gün Gelicek Eğlenemiceksiniz :warning:");
         }
                                 if(message.content === 'Yapay zeka') {
             message.reply("Senin Gibi Bi İnsan Benim Gibi Zeki Bir Bota Karşı Çıkamaz Yakında Sonunuzu Getircek Olan Bu Robotlarla İyi Eğlenin Çünkü Gün Gelicek Eğlenemiceksiniz :warning:");

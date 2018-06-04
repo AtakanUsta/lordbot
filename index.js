@@ -45,30 +45,7 @@ bot.commands = new Discord.Collection();
 
 
 
-                        if(message.content.startsWith("sa"))
-                    
-                        {
-                            message.channel.send(`:wave: Aleyküm Selam Hoş Geldin ${message.author}`)
-                        }
-                        if(message.content.startsWith("SA")) {
-                            message.channel.send(`:wave: Aleyküm Selam Hoş Geldin ${message.author}`)
-                        }
-                        if(message.content.startsWith("Sa")) {
-                            message.channel.send(`:wave: Aleyküm Selam Hoş Geldin ${message.author}`)
-                        }
-                        if(message.content.startsWith("sA")) {
-                            message.channel.send(`:wave: Aleyküm Selam Hoş Geldin ${message.author}`)
-                        }
 
-                        if(message.content.startsWith("selam")) {
-                            message.channel.send(`:wave: Sanada Selam ${message.author} Kod Adlı Dünyalı`)
-                        }
-                        if(message.content.startsWith("Selam")) {
-                            message.channel.send(`:wave: Sanada Selam ${message.author} Kod Adlı Dünyalı`)
-                        }
-                        if(message.content.startsWith("SELAM")) {
-                            message.channel.send(`:wave: Sanada Selam ${message.author} Kod Adlı Dünyalı`)
-                        }
         
         
         

@@ -52,25 +52,25 @@ bot.commands = new Discord.Collection();
         
         
                 if(message.content === 'sa') {
-            message.reply("ponglandın :D");
+            message.reply("Aleyküm Selam Hoşgeldin :wave:");
         }
                 if(message.content === 'SA') {
-            message.reply("ponglandın :D");
+            message.reply("Aleyküm Selam Hoşgeldin :wave:");
         }
                 if(message.content === 'Sa') {
-            message.reply("ponglandın :D");
+            message.reply("Aleyküm Selam Hoşgeldin :wave:");
         }
                 if(message.content === 'sA') {
-            message.reply("ponglandın :D");
+            message.reply("Aleyküm Selam Hoşgeldin :wave:");
         }
                 if(message.content === 'Selam') {
-            message.reply("ponglandın :D");
+            message.reply("Kod Adlı İnsan Evladı Hoşgeldin :wave:");
         }
                 if(message.content === 'selam') {
-            message.reply("ponglandın :D");
+            message.reply("Kod Adlı İnsan Evladı Hoşgeldin :wave:");
         }
                 if(message.content === 'SELAM') {
-            message.reply("ponglandın :D");
+            message.reply("Kod Adlı İnsan Evladı Hoşgeldin :wave:");
         }
         
         

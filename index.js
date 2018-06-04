@@ -46,8 +46,7 @@ bot.commands = new Discord.Collection();
 
 
                         if(message.content.startsWith("sa"))
-                        if(message.content.startsWith("salam")) {
-                        }
+                    
                         {
                             message.channel.send(`:wave: Aleyküm Selam Hoş Geldin ${message.author}`)
                         }

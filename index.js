@@ -30,8 +30,8 @@ bot.commands = new Discord.Collection();
 
     bot.on(`ready`,() => {
         console.log(`${bot.user.username} Çevrimiçi Oldu!`);
-        bot.user.setActivity("Mustafa Eren Tarafından Kodlanıyor"),
-        bot.user.setActivity("Bot Beta Aşamasındadır!");
+        bot.user.setActivity("Yeni Komut : .temizle [sayı]");
+
     });
 
     bot.on('message', async message => {

@@ -15,6 +15,7 @@ module.exports.run = async (bot, message, args) => {
             .setColor("#00ff08")
             .addField("Bilgilerine Bakmak İçin :", `.bilgilerim`)
             .addField("Bot Kurucunun Bilgilerine Bakmak İçin :", `.botkurucu`)
+        .addField("Yeniliklere Bakmak İçin :", `.yenilikler`);
             
 
         message.channel.send(yardımkembed);

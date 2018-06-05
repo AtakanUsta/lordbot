@@ -26,7 +26,7 @@ module.exports.run = async (bot, message, args) => {
     if(!deleteCount || deleteCount < 2 || deleteCount > 100)
       return message.reply(":warning: `Silinmek İstenen Mesaj Sayısı 2 ile 100 Arasında Olmalıdır! `");
     
-    const fetched = await message.channel.fetchMessages({limit: deleteCount});
+    const fetched = await message.channel.fetchMessages({limit: deleteCount};
     message.channel.bulkDelete(fetched)
       .catch(error => message.reply(`Bunu Yapamazsın [Lütfen Bot Yapımcısına Bunu Gösterin (.botkurucu)] | Hata: ${error}`));
 

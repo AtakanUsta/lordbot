@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
             if(message.mentions.users.size < 1) return message.reply(":warning: `Lütfen Uyarmak İstediğin Kullanıcının İsminide Gir`").catch(console.error);
             
             
-            const uyariembed = new Discord.RichEmbed()
+            let uyariembed = new Discord.RichEmbed()
             .setColor("#fc9300")
             .setField("Uyarılan", `${user.username}#${user.discriminator}`)
             .setField("Uyaran", `${message.author.user}#${message.author.discriminator}`);

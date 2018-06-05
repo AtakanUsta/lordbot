@@ -30,7 +30,7 @@ bot.commands = new Discord.Collection();
 
     bot.on(`ready`,() => {
         console.log(`${bot.user.username} Çevrimiçi Oldu!`);
-        bot.user.setActivity("Yeniliklere Bakmak İçin : .yenilikler");
+        bot.user.setActivity("Komutları Öğrenmek İçin : .yardım");
 
     });
 

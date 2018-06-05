@@ -38,23 +38,23 @@ module.exports.run = async (bot, message, args) => {
 
 
 
-  if(warns[wUser.id].warns == 2){
-    let muterole = message.guild.roles.find(`name`, "muted");
-    if(!muterole) return message.reply("muted rolü oluşturmalısın");
-
-    let mutetime = "10s";
-    await(wUser.addRole(muterole.id));
-    message.channel.send(`<@${wUser.id}> Adlı Kullanıcı 2 Uyarı Alarak 10Saniye Susturma Cezası Aldı`);
-
-    setTimeout(function(){
-      wUser.removeRole(muterole.id)
-      message.reply(`<@${wUser.id}> Adlı Kullanıcının Susturma Cezası Bitti`)
-    }, ms(mutetime))
-  }
-  if(warns[wUser.id].warns == 6){
-    message.guild.member(wUser).ban(reason);
-    message.reply(`<@${wUser.id}> Adlı Kullancı 6 Uyarı Alarak Serverdan Banlandı!`)
-  }
+//  if(warns[wUser.id].warns == 2){
+//    let muterole = message.guild.roles.find(`name`, "muted");
+  //  if(!muterole) return message.reply("muted rolü oluşturmalısın");
+//
+//    let mutetime = "10s";
+//    await(wUser.addRole(muterole.id));
+//    message.channel.send(`<@${wUser.id}> Adlı Kullanıcı 2 Uyarı Alarak 10Saniye Susturma Cezası Aldı`);
+//
+//    setTimeout(function(){
+//      wUser.removeRole(muterole.id)
+//      message.reply(`<@${wUser.id}> Adlı Kullanıcının Susturma Cezası Bitti`)
+//    }, ms(mutetime))
+//  }
+//  if(warns[wUser.id].warns == 6){
+//    message.guild.member(wUser).ban(reason);
+//    message.reply(`<@${wUser.id}> Adlı Kullancı 6 Uyarı Alarak Serverdan Banlandı!`)
+//  }
 
 }
 

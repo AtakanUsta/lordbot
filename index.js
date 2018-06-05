@@ -97,10 +97,10 @@ bot.commands = new Discord.Collection();
                                 //public botta kalkacak!
         
                                         if(message.content === 'mvo!profil') {
-            message.reply("mvo!profil Bu Sunucuda Bir İşe Yarmaz Level Rolleri !rank Komutundaki Seviyenize Bağlıdır ");
+            message.reply("mvo!profil Bu Sunucuda Bir İşe Yaramaz Level Rolleri !rank Komutundaki Seviyenize Bağlıdır ");
         }
                                                 if(message.content === 'MVO!profil') {
-            message.reply("mvo!profil Bu Sunucuda Bir İşe Yarmaz Level Rolleri !rank Komutundaki Seviyenize Bağlıdır ");
+            message.reply("mvo!profil Bu Sunucuda Bir İşe Yaramaz Level Rolleri !rank Komutundaki Seviyenize Bağlıdır ");
         }
         
         

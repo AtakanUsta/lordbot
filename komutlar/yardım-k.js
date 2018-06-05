@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
             .addField("Bot Kurucunun Bilgilerine Bakmak İçin :", `.botkurucu`)
             
 
-        message.channel.send(yarımkembed);
+        message.channel.send(yardımkembed);
     
 
 

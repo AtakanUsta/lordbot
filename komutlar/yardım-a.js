@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
        
         let yardimaembed = new Discord.RichEmbed()
             .setAuthor("~ A D M İ N ~")
-            .setColor("#ff0000")
+            .setColor("#04ff00")
             .addField(".yaz [mesaj]", `Bota Mesaj Yazdırmaya Yarar!`)
             .addField(".temizle [sayı]", `Bota Mesaj Yazdırmaya Yarar!`)
             .addField(".sustur [kullanıcı] [süre (milisaniye biçiminden)]", `Kullanıcıyı Belli Süre Susturmaya Yarar`)

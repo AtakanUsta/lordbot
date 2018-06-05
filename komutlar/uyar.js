@@ -18,10 +18,7 @@ module.exports.run = async (bot, message, args) => {
             
             
             const uyariembed = new Discord.RichEmbed()
-            
-            
             .setColor("#fc9300")
-            .setTimestamp()
             .setField("Uyarılan", `${user.username}#${user.discriminator}`)
             .setField("Uyaran", `${message.author.user}#${message.author.discriminator}`);
             return bot.channels.get(modlog.id).sendEmbed(uyariembed);

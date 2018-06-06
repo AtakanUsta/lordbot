@@ -1,13 +1,22 @@
-const Command = require('../../structures/Command');
-const { randomRange, verify } = require('../../util/Util');
+const Command = require('../structures/Command');
+const { randomRange, verify } = require('../util/Util');
 
+const Discord = require("discord.js");
+
+
+module.exports.run = async (bot, message, args) => {
+	
+	
+	
+	
+	
 module.exports = class BalloonPopCommand extends Command {
 	constructor(client) {
 		super(client, {
 			name: 'balloon-pop',
 			group: 'games',
 			memberName: 'balloon-pop',
-			description: 'Don\'t let yourself be the last one to pump the balloon before it pops!',
+			description: 'Balon Patlatma Oyunu',
 			args: [
 				{
 					key: 'opponent',
@@ -75,3 +84,10 @@ module.exports = class BalloonPopCommand extends Command {
 		}
 	}
 };
+	
+	//kod bitiş
+	}
+
+module.exports.help = {
+    name: "balon-pop"
+}

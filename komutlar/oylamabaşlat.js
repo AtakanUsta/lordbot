@@ -27,7 +27,7 @@ const embed = new Discord.RichEmbed()
   .addField(":keycap_ten: : 10 Puan.", "Oylamaya Tepki Vererek Katıabilirsin.");
 
   message.channel.send({embed});
-  .then(function (message) {
+  then(function (message) {
               message.react("1️⃣")
               message.react("2️⃣")
               message.react("3️⃣")

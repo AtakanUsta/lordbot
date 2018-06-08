@@ -16,13 +16,13 @@ const embed = new Discord.RichEmbed()
 
   .addField("Tepkilerin Anlamları", ":one: : 1 Puan")
   .addField(":two: : 2 Puan.", ":three: : 3 Puan.", true)
-  .addBlankField(true)
+ 
   .addField(":four: : 4 Puan.", ":five: : 5 Puan.", true)
-    .addBlankField(true)
+
   .addField(":six: : 6 Puan.", ":seven: : 7 Puan.", true)
-    .addBlankField(true)
+
   .addField(":eight: : 8 Puan.", ":nine: : 9 Puan.", true)
-    .addBlankField(true)
+
   .addField(":keycap_ten: : 10 Puan.", "Oylamaya Tepki Vererek Katıabilirsin.", true);
 
   message.channel.send({embed});

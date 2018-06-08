@@ -36,7 +36,7 @@ const embed = new Discord.RichEmbed()
     message.react("7️⃣")
     message.react("8️⃣")
     message.react("9️⃣")
-    message.react("🔟");
+    message.react("🔟")};
 
   
   

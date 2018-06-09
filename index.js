@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const botconfig = require("./botconfig.json");
+const botconfig = require("./token.json");
 const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
@@ -38,7 +39,7 @@ bot.commands = new Discord.Collection();
         if(message.author.bot) return;
         if(message.channel.type === "dm") return;
 
-        let prefix = botconfig.prefix;
+        let prefix = prefix.prefix;
         let messageArray = message.content.split(" ");
         let command = messageArray[0];
         let args = messageArray.slice(1);

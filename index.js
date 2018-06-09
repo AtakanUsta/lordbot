@@ -11,7 +11,7 @@ bot.commands = new Discord.Collection();
 
         let jsfile = files.filter(f => f.split(".").pop() === "js")
         if(jsfile.length <= 0) {
-            console.log("Komut Bulamıyorum Lütfen Kontrol Et");
+            console.log("Komut Bulamıyorum Lütfen Kontrol Et QNQ");
             return;
 
         }

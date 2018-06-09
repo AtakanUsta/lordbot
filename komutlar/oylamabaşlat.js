@@ -29,15 +29,15 @@ const embed = new Discord.RichEmbed()
   message.channel.send({embed})
   
   
-  let emoji1 = message.guild.emojis.find(`name`, "one");
-    let emoji2 = message.guild.emojis.find(`name`, "two");
-      let emoji3 = message.guild.emojis.find(`name`, "three");
-        let emoji4 = message.guild.emojis.find(`name`, "four");
-          let emoji5 = message.guild.emojis.find(`name`, "five");
-            let emoji6 = message.guild.emojis.find(`name`, "six");
-              let emoji7 = message.guild.emojis.find(`name`, "seven");
-                let emoji8 = message.guild.emojis.find(`name`, "eight");
-                  let emoji9 = message.guild.emojis.find(`name`, "nine");
+  let emoji1 = message.guild.emojis.find('name', "one");
+    let emoji2 = message.guild.emojis.find('name', "two");
+      let emoji3 = message.guild.emojis.find('name', "three");
+        let emoji4 = message.guild.emojis.find('name', "four");
+          let emoji5 = message.guild.emojis.find('name', "five");
+            let emoji6 = message.guild.emojis.find('name', "six");
+              let emoji7 = message.guild.emojis.find('name', "seven");
+                let emoji8 = message.guild.emojis.find('name', "eight");
+                  let emoji9 = message.guild.emojis.find('name', "nine");
   
               message.react(emoji1);
               message.react(emoji2);

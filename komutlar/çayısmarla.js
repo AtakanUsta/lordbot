@@ -7,9 +7,19 @@ module.exports.run = async (bot, message, args) => {
                 let user = message.mentions.users.first();
          if(message.mentions.users.size < 1) return message.reply(":warning: `Lütfen Çay Ismarlamak İstediğin Kullanıcının İsminide Gir`").catch(console.error);
         
+        if(message.mentions.users) = "herkes" return;
+                let menu = new Discord.RichEmbed()
+            .setAuthor("MENÜ")
+            .setDescription(`@${message.author.username} Adlı Kişi Herkese Çay Ismarladı`)
+            .setColor("#00ff08")
+            .setImage("http://mmatr.pe.hu/yemekresimleri/çay.jpg")
+
+        let sohpet = bot.channels.find(`name`, `💬sohpet`);
+        bot.channels.get(sohpet.id).sendEmbed(menu);
+                else;
         let menu = new Discord.RichEmbed()
             .setAuthor("MENÜ")
-            .setDescription(`${message.author.username} Adlı Kişi ${user} Adlı Kişiye Çay Ismarladı`)
+            .setDescription(`@${message.author.username} Adlı Kişi ${user} Adlı Kişiye Çay Ismarladı`)
             .setColor("#00ff08")
             .setImage("http://mmatr.pe.hu/yemekresimleri/çay.jpg")
 

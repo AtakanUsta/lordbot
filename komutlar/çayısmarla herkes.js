@@ -1,4 +1,3 @@
-es (19 sloc)  1.27 KB
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
@@ -30,5 +29,5 @@ module.exports.run = async (bot, message, args) => {
                }
 
 module.exports.help = {
-    name: "uyar"
+    name: "herkeseçayısmarla"
 }

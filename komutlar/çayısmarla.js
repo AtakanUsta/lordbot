@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args) => {
 
         let sohpet = bot.channels.find(`name`, `💬sohpet`);
         bot.channels.get(sohpet.id).sendEmbed(menu);
-                else;
+                else
         let menu = new Discord.RichEmbed()
             .setAuthor("MENÜ")
             .setDescription(`@${message.author.username} Adlı Kişi ${user} Adlı Kişiye Çay Ismarladı`)

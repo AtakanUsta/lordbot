@@ -8,8 +8,7 @@ module.exports.run = async (bot, message, args) => {
             .setAuthor("~ Y E N İ L İ K L E R ~")
             .setDescription("Yeniliklere Burdan Bakabilirsin")
             .setColor("#00ff08")
-            .addField(" .temizle [sayı] ", `Chati Temizlemenize Yarar`)
-            .addField(" .yaz [mesaj] ", `Bota Birşeyler Yazdırmaya Yarar`)
+            .addField(" .menü ", `Menüye Bakmanıza Yarar`)
            
 
         message.channel.send(yenilikler);

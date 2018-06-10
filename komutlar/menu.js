@@ -17,7 +17,8 @@ module.exports.run = async (bot, message, args) => {
             .addField(".tost", "oooh mis Gibi Kaşarlı Tost", false)     
             .addField(".baklava", "Haşurrrt", false)
             .addField(".gevrek", "Gevrek Yersin istersen .çay Yazıp Yanında Bide Çay İçersin", false)
-            .addField(".bomba", "İzmire Has Bomba Tatlısını Yersin (bi yesen varya ufff)", false);
+            .addField(".bomba", "İzmire Has Bomba Tatlısını Yersin (bi yesen varya ufff)", false)
+            .addField(".çayısmarla", "Herkese Çay Ismarlarsın")
 
         message.channel.send(menu);
     

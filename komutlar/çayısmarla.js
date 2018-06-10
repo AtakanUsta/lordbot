@@ -14,8 +14,8 @@ module.exports.run = async (bot, message, args) => {
             .setColor("#00ff08")
             .setImage("http://mmatr.pe.hu/yemekresimleri/çay.jpg")
 
-        let sohpet = bot.channels.find(`name`, `💬sohpet`);
-        bot.channels.get(sohpet.id).sendEmbed(menu);
+        let sohpet2 = bot.channels.find(`name`, `💬sohpet`);
+        bot.channels.get(sohpet2.id).sendEmbed(menu);
                 
         ifnot(message.mentions.users = "@everyone"); return;
         let menu2 = new Discord.RichEmbed()

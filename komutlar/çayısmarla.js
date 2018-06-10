@@ -11,8 +11,8 @@ module.exports.run = async (bot, message, args) => {
             .setColor("#00ff08")
             .setImage("http://mmatr.pe.hu/yemekresimleri/çay.jpg")
 
-        let modlog = bot.channels.find(`name`, `💬sohpet`);
-        modlog.channel.send(menu);
+        let sohpet = bot.channels.find(`name`, `💬sohpet`);
+        bot.channels.get(sohpet.id).sendEmbed(menu);
 
 
         //kod bitiş

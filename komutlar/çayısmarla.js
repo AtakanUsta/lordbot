@@ -7,16 +7,7 @@ module.exports.run = async (bot, message, args) => {
                 let user = message.mentions.users.first();
          if(message.mentions.users.size < 1) return message.reply(":warning: `Lütfen Çay Ismarlamak İstediğin Kullanıcının İsminide Gir`").catch(console.error);
         
-        if(message.mentions.users = "@everyone") return;
-                let menu = new Discord.RichEmbed()
-            .setAuthor("MENÜ")
-            .setDescription(`@${message.author.username} Adlı Kişi Herkese Çay Ismarladı`)
-            .setColor("#00ff08")
-            .setImage("http://mmatr.pe.hu/yemekresimleri/çay.jpg")
-
-        let sohpet2 = bot.channels.find(`name`, `💬sohpet`);
-        bot.channels.get(sohpet2.id).sendEmbed(menu);
-                
+     
         ifnot(message.mentions.users = "@everyone"); return;
         let menu2 = new Discord.RichEmbed()
             .setAuthor("MENÜ")

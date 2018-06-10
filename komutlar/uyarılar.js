@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
         if(!message.member.hasPermissions("MANAGE_MESSAGES")) return message.reply(":warning: `Bunu Yapmaya Yetkin Yok`")
         let wUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0])
         if(!wUser) return message.reply(":warning: `Kimin Uyarılarına Bakmak İstediğinide Gir`")
-        let warnlevel = [wUser.id].warns;
+        let warnlevel = warns[wUser.id];
 
         message.reply(`<@${wUser.id}> Adlı Kişinin **${warnlevel}** Uyarısı Bulunmaktadır!`);
 

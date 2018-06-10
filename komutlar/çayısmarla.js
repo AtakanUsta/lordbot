@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
                 let user = message.mentions.users.first();
          if(message.mentions.users.size < 1) return message.reply(":warning: `Lütfen Çay Ismarlamak İstediğin Kullanıcının İsminide Gir`").catch(console.error);
         
-        if(message.mentions.users) = "herkes" return;
+        if(message.mentions.users = "@everyone") return;
                 let menu = new Discord.RichEmbed()
             .setAuthor("MENÜ")
             .setDescription(`@${message.author.username} Adlı Kişi Herkese Çay Ismarladı`)

@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
         //kod başlangıç
 
                 let user = message.mentions.users.first();
-         if(message.mentions.users.size < 1) return message.reply(":warning: `Lütfen Uyarmak İstediğin Kullanıcının İsminide Gir`").catch(console.error);
+         if(message.mentions.users.size < 1) return message.reply(":warning: `Lütfen Çay Ismarlamak İstediğin Kullanıcının İsminide Gir`").catch(console.error);
         
         let menu = new Discord.RichEmbed()
             .setAuthor("MENÜ")

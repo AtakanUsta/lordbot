@@ -4,10 +4,12 @@ module.exports.run = async (bot, message, args) => {
 
         //kod başlangıç
 
-
+                let user = message.mentions.users.first();
+         if(message.mentions.users.size < 1) return message.reply(":warning: `Lütfen Uyarmak İstediğin Kullanıcının İsminide Gir`").catch(console.error);
+        
         let menu = new Discord.RichEmbed()
             .setAuthor("MENÜ")
-            .setDescription(`${message.author.username} Adlı Kişi Herkese Çay Ismarladı (şakire yok)`)
+            .setDescription(`${message.author.username} Adlı Kişi ${user} Adlı Kişiye Çay Ismarladı`)
             .setColor("#00ff08")
             .setImage("http://mmatr.pe.hu/yemekresimleri/çay.jpg")
 

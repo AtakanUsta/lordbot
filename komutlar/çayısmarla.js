@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
 
         let menu2 = new Discord.RichEmbed()
             .setAuthor("MENÜ")
-            .setDescription(`@${user.username}#${user.discriminator} Adlı Kişi ${user} Adlı Kişiye Çay Ismarladı`)
+            .setDescription(`${message.author.username} Adlı Kişi ${user} Adlı Kişiye Çay Ismarladı`)
             .setColor("#00ff08")
             .setImage("http://mmatr.pe.hu/yemekresimleri/çay.jpg")
 

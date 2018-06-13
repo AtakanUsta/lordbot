@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args) => {
             .setImage("http://mmatr.pe.hu/yemekresimleri/çay.jpg")
 
         let sohpet = bot.channels.find(`name`, `💬sohpet`);
-        sohpet.send(menu2);
+        sohpet.channel.send(menu2);
 
 
         //kod bitiş

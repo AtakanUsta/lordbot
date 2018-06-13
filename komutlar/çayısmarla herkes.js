@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
             .setImage("http://mmatr.pe.hu/yemekresimleri/çay.jpg")
 
         let sohpet = bot.channels.find(`name`, `💬sohpet`);
-        sohpet.sendEmbed(menu);
+        sohpet.send(menu);
                
                
                

@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
 
         //kod başlangıç
 
-        if(!message.member.hasPermissions("ADMINASTOR")) return message.channel.send(":warning: `Bunu Yapmaya Yetkin Yok!`");
+        if(!message.member.hasPermissions("ADMINISTRATOR")) return message.channel.send(":warning: `Bunu Yapmaya Yetkin Yok!`");
 
         let sohpet = message.guild.channels.find('name', "💬sohbet");
 

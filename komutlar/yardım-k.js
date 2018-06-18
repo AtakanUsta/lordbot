@@ -13,7 +13,7 @@ module.exports.run = async (bot, message, args) => {
         let yardımkembed = new Discord.RichEmbed()
             .setAuthor("~ K U L L A N I C I ~")
             .setColor("#00ff08")
-            .addField("Bilgilerine Bakmak İçin :", `.bilgilerim`)
+            .addField("Kullanınıcının Bilgilerine Bakmak İçin :", `.bilgi [@Kullanıcı]`)
             .addField("Bot Kurucunun Bilgilerine Bakmak İçin :", `.botkurucu`)
         .addField(" .menü ", `Menüye Bakmanıza Yarar`)
         .addField("Yeniliklere Bakmak İçin :", `.yenilikler`);

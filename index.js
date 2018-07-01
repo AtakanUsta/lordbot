@@ -23,6 +23,27 @@ bot.commands = new Discord.Collection();
     });
 
 
+ fs.readdir("./komutlar/sohpetikapat/", (err, files) => {
+        if(err) console.log(err);
+
+        let jsfile = files.filter(f => f.split(".").pop() === "js")
+        if(jsfile.length <= 0) {
+            console.log("Sohpeti Kapatta Komut Bulamıyorum Lütfen Kontrol Et QNQ");
+            return;
+
+        }
+
+        jsfile.forEach((f, i) => {
+            let props2 = require(`./komutlar/sohpetikapat/${f}`);
+            
+            console.log(`${f} Yüklendi [sohpetikapat]`);
+            bot.commands.set(props2.help.name, props2);
+            
+        });
+    });
+
+
+
 
 function ActivityStreaming() {
         return new Promise(resolve => {

@@ -4,9 +4,16 @@ module.exports.run = async (bot, message, args) => {
 
     if(!message.member.hasPermissions("ADMINIASTOR")) return message.reply(":warning: `Bunu Yapmaya Yetkin Yok!`");
      
-     bot.guild.member.sendMessage("Sakin Ol ! Bu Sadece Bir Duyuru Denemesi");
+     let yazi = args[0]
+     let yazi2 = args[1]
+     
+     
+     let embed = new Discord.RichEmbed()
+     .setAuthor(yazi)
+     .setDescription(yazi2)
+     
 }
 
 module.exports.help = {
-    name: "duyuru"
+    name: "embed"
 }

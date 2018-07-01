@@ -24,13 +24,92 @@ bot.commands = new Discord.Collection();
 
 
 
+function ActivityStreaming() {
+        return new Promise(resolve => {
+          setTimeout(() => {
+            bot.user.setActivity(`Yardım : .yardım`, { type: 'STREAMING',url:'http://twitch.tv/mustafaeren'});
+            ActivityServers();
+          }, 10000);
+        });
+    }
+    function ActivityServers() {
+        return new Promise(resolve => {
+          setTimeout(() => {
+            bot.user.setActivity(`Mustafa Eren ile`, { type: 'STREAMING',url:'http://twitch.tv/mustafaeren'});
+            ActivityStreaming();
+          }, 10000);
+        });
+    }
+
+
+
+
+
+    function atnkanal1() {
+        return new Promise(resolve => {
+          setTimeout(() => {
+            
+              bot.channels.get("459330018791784459").setName(`🔴⚫🔴⚫🔴⚫🔴`);
+              bot.channels.get("459331426547138560").setName(`http://bit.ly/ustayt`);
+              bot.channels.get("459331793548738583").setName(`http://atakanusta.tk`);
+              bot.channels.get("459331697654366219").setName(`http://bit.ly/ustadc`);
+              bot.channels.get("459330034377687060").setName(`🔴⚫🔴⚫🔴⚫🔴`);
+              
+            atnkanal2();
+          }, 10000);
+        });
+    }
+
+    function atnkanal2() {
+        return new Promise(resolve => {
+          setTimeout(() => {
+            
+                            bot.channels.get("459330018791784459").setName(`🔴🔴🔴🔴🔴🔴🔴`);
+              bot.channels.get("459331426547138560").setName(`http://bit.ly/ustayt`);
+              bot.channels.get("459331793548738583").setName(`http://atakanusta.tk`);
+              bot.channels.get("459331697654366219").setName(`http://bit.ly/ustadc`);
+              bot.channels.get("459330034377687060").setName(`🔴🔴🔴🔴🔴🔴🔴`);
+              
+            atnkanal3();
+          }, 10000);
+        });
+    }
+
+    function atnkanal3() {
+        return new Promise(resolve => {
+          setTimeout(() => {
+            
+                            bot.channels.get("459330018791784459").setName(`⚫⚫⚫⚫⚫⚫⚫`);
+              bot.channels.get("459331426547138560").setName(`Atakan Usta`);
+              bot.channels.get("459331793548738583").setName(`Serverine`);
+              bot.channels.get("459331697654366219").setName(`Hoşgeldin!`);
+              bot.channels.get("459330034377687060").setName(`⚫⚫⚫⚫⚫⚫⚫`);
+              
+            atnkanal1();
+          }, 10000);
+        });
+    }
+
+
+
+
+
 
  
 
 
     bot.on(`ready`,() => {
-        console.log(`${bot.user.username} Çevrimiçi Oldu!`);
-        bot.user.setActivity("Komutları Öğrenmek İçin : .yardım");
+        console.log(``);
+        console.log(`#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#`);
+        console.log(`|                                             |`);
+        console.log(`#      LordBot Beta Test Aktifleştirildi!     #`);
+        console.log(`|                                             |`);
+        console.log(`#           Created by Mustafa Eren           #`);
+        console.log(`|                                             |`);
+        console.log(`#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#`);
+        console.log(` | ${bot.guilds.size} Server |`);
+        ActivityStreaming();
+        atnkanal1();
 
     });
 
@@ -43,9 +122,12 @@ bot.commands = new Discord.Collection();
         let command = messageArray[0];
         let args = messageArray.slice(1);
 
+    
+                
 
 
-
+        
+        
         
         
         

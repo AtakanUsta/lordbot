@@ -4,7 +4,7 @@ module.exports.run = async (bot, message, args) => {
 
         //kod başlangıç
 
-        if(!message.member.hasPermissions("ADMINIASTOR")) return message.channel.send(":warning: `Bunu Yapmaya Yetkin Yok!`");
+        if(!message.member.hasPermissions("ADMINISTRATOR")) return message.channel.send(":warning: `Bunu Yapmaya Yetkin Yok!`");
         
 
 

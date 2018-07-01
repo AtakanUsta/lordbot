@@ -4,7 +4,7 @@ module.exports.run = async (bot, message, args) => {
 
         //kod başlangıç
 
-        if(!message.member.hasPermissions("ADMINASTOR")) return message.channel.send(":warning: `Bunu Yapmaya Yetkin Yok!`");
+        if(!message.member.hasPermissions("ADMINISTRATOR")) return message.channel.send(":warning: `Bunu Yapmaya Yetkin Yok!`");
         
 
 
@@ -19,7 +19,7 @@ module.exports.run = async (bot, message, args) => {
         let kanal9 = message.guild.channels.find('name', `hikaye_oluşturma`);
         let kanal10 = message.guild.channels.find('name', `şarkılardan_sözler`);
 
-        let rol = message.guild.roles.find('name', "o");
+        
 
         let rol2 = message.guild.roles.find('name', "❌Takipçiler❌");
         let rol3 = message.guild.roles.find('name', "💚Konuşkan Üye💚");
@@ -31,7 +31,7 @@ module.exports.run = async (bot, message, args) => {
         let rol9 = message.guild.roles.find('name', "Ultra destekçi");
         let rol10 = message.guild.roles.find('name', "Destekçi");
 
-            if(!kanal) return message.channel.send(":warning: `Kanalını Bulamıyorum!`")
+            
 
             kanal.overwritePermissions(rol2, {'SEND_MESSAGES': true,})
             kanal2.overwritePermissions(rol2, {'SEND_MESSAGES': true,})

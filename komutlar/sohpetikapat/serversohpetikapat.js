@@ -167,16 +167,16 @@ kanal10.overwritePermissions(rol10, {'SEND_MESSAGES': false,})
             .addField("Sohpet Tekrar Açılanakadar Konuşulamaz!", "Yetkilinin Sohpeti Açması İçin Yazması Gereken : .serversohpetiaç")
             .addBlankField()
 
-            kanal.send(sohpetiaçembed)
-            kanal2.send(sohpetiaçembed)
-            kanal3.send(sohpetiaçembed)
-            kanal4.send(sohpetiaçembed)
-            kanal5.send(sohpetiaçembed)
-            kanal6.send(sohpetiaçembed)
-            kanal7.send(sohpetiaçembed)
-            kanal8.send(sohpetiaçembed)
-            kanal9.send(sohpetiaçembed)
-            kanal10.send(sohpetiaçembed)
+            kanal.send(sohpetiaçembed).then(msg => msg.delete(25000));
+            kanal2.send(sohpetiaçembed).then(msg => msg.delete(25000));
+            kanal3.send(sohpetiaçembed).then(msg => msg.delete(25000));
+            kanal4.send(sohpetiaçembed).then(msg => msg.delete(25000));
+            kanal5.send(sohpetiaçembed).then(msg => msg.delete(25000));
+            kanal6.send(sohpetiaçembed).then(msg => msg.delete(25000));
+            kanal7.send(sohpetiaçembed).then(msg => msg.delete(25000));
+            kanal8.send(sohpetiaçembed).then(msg => msg.delete(25000));
+            kanal9.send(sohpetiaçembed).then(msg => msg.delete(25000));
+            kanal10.send(sohpetiaçembed).then(msg => msg.delete(25000));
             
 
             

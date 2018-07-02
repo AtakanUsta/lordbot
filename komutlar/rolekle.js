@@ -1,3 +1,6 @@
+const ayar = require("./ayar.json");
+
+
 module.exports.run = async (bot, message, args) => {
 
 

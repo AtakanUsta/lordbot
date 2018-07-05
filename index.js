@@ -48,7 +48,7 @@ bot.commands = new Discord.Collection();
 function ActivityStreaming() {
         return new Promise(resolve => {
           setTimeout(() => {
-            bot.user.setActivity(`Yardım : .yardım`, { type: 'STREAMING',url:'http://twitch.tv/mustafaeren'});
+            bot.user.setActivity(`Prefix Değişdi! l!prefix`, { type: 'STREAMING',url:'http://twitch.tv/mustafaeren'});
             ActivityServers();
           }, 10000);
         });
@@ -107,12 +107,42 @@ function ActivityStreaming() {
               bot.channels.get("459331697654366219").setName(`Hoşgeldin!`);
               bot.channels.get("459330034377687060").setName(`⚫⚫⚫⚫⚫⚫⚫`);
               
-            atnkanal1();
+            atnkanal4();
           }, 10000);
         });
     }
 
+    function atnkanal4() {
+        return new Promise(resolve => {
+          setTimeout(() => {
+            
+             
+              bot.channels.get("459331426547138560").setName(`Ben(Mustafa)`);
+               bot.channels.get("459330018791784459").setName(`📢 🇩🇺🇾🇺🇷🇺`);
+              bot.channels.get("459331793548738583").setName(`Yeni Bir Oyun`);
+              bot.channels.get("459331697654366219").setName(`Yapabilirim`);
+              bot.channels.get("459330034377687060").setName(`📢 🇩🇺🇾🇺🇷🇺`);
+              
+            atnkanal5();
+          }, 10000);
+        });
+    }
 
+    function atnkanal5() {
+        return new Promise(resolve => {
+          setTimeout(() => {
+            
+             
+              bot.channels.get("459331426547138560").setName(`LordBot Kısa Bir`);
+               bot.channels.get("459330018791784459").setName(`📢 🇩🇺🇾🇺🇷🇺`);
+              bot.channels.get("459331793548738583").setName(`Süre Bakıma`);
+              bot.channels.get("459331697654366219").setName(`Alındı!`);
+              bot.channels.get("459330034377687060").setName(`📢 🇩🇺🇾🇺🇷🇺`);
+              
+            atnkanal1();
+          }, 10000);
+        });
+    }
 
 
 

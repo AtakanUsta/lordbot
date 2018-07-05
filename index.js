@@ -70,8 +70,9 @@ function ActivityStreaming() {
         return new Promise(resolve => {
           setTimeout(() => {
             
-              bot.channels.get("459330018791784459").setName(`🔴⚫🔴⚫🔴⚫🔴`);
+             
               bot.channels.get("459331426547138560").setName(`http://bit.ly/ustayt`);
+               bot.channels.get("459330018791784459").setName(`🔴⚫🔴⚫🔴⚫🔴`);
               bot.channels.get("459331793548738583").setName(`http://atakanusta.tk`);
               bot.channels.get("459331697654366219").setName(`http://bit.ly/ustadc`);
               bot.channels.get("459330034377687060").setName(`🔴⚫🔴⚫🔴⚫🔴`);

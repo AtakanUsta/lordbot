@@ -1,6 +1,9 @@
 const Discord = require("discord.js");
 const botconfig = require("./botconfig.json");
 const fs = require("fs");
+const Util = require('discord.js');
+
+
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 
@@ -17,13 +20,17 @@ bot.commands = new Discord.Collection();
 
         jsfile.forEach((f, i) => {
             let props = require(`./komutlar/${f}`);
+            
             console.log(`${f} Yüklendi`);
             bot.commands.set(props.help.name, props);
+            
         });
     });
 
 
- fs.readdir("./komutlar/sohpetikapat/", (err, files) => {
+
+
+    fs.readdir("./komutlar/sohpetikapat/", (err, files) => {
         if(err) console.log(err);
 
         let jsfile = files.filter(f => f.split(".").pop() === "js")
@@ -43,12 +50,32 @@ bot.commands = new Discord.Collection();
     });
 
 
+   
+
+    fs.readdir("./komutlar/gerisayim/", (err, files) => {
+        if(err) console.log(err);
+
+        let jsfile = files.filter(f => f.split(".").pop() === "js")
+        if(jsfile.length <= 0) {
+            console.log("gerisayimda Komut Bulamıyorum Lütfen Kontrol Et QNQ");
+            return;
+
+        }
+
+        jsfile.forEach((f, i) => {
+            let props4 = require(`./komutlar/gerisayim/${f}`);
+            
+            console.log(`${f} Yüklendi [gerisayim]`);
+            bot.commands.set(props4.help.name, props4);
+            
+        });
+    });
 
 
-function ActivityStreaming() {
+    function ActivityStreaming() {
         return new Promise(resolve => {
           setTimeout(() => {
-            bot.user.setActivity(`Prefix Değişdi! l!prefix`, { type: 'STREAMING',url:'http://twitch.tv/mustafaeren'});
+            bot.user.setActivity(`Yardım : .yardım`, { type: 'STREAMING',url:'http://twitch.tv/mustafaeren'});
             ActivityServers();
           }, 10000);
         });
@@ -61,96 +88,38 @@ function ActivityStreaming() {
           }, 10000);
         });
     }
+    
+    let istatistikkanali = bot.channels.get('459733762234777601');
 
+    
 
-
-
-
-    function atnkanal1() {
+    function istatistik() {
         return new Promise(resolve => {
           setTimeout(() => {
+           
             
-             
-              bot.channels.get("459331426547138560").setName(`http://bit.ly/ustayt`);
-               bot.channels.get("459330018791784459").setName(`🔴⚫🔴⚫🔴⚫🔴`);
-              bot.channels.get("459331793548738583").setName(`http://atakanusta.tk`);
-              bot.channels.get("459331697654366219").setName(`http://bit.ly/ustadc`);
-              bot.channels.get("459330034377687060").setName(`🔴⚫🔴⚫🔴⚫🔴`);
-              
-            atnkanal2();
+            bot.channels.get("459733762234777601").setName(`${bot.guilds.size} Adet Sunucudayım`);
+
+            istatistik2();
           }, 10000);
         });
     }
-
-    function atnkanal2() {
+    
+    function istatistik2() {
         return new Promise(resolve => {
           setTimeout(() => {
-            
-                            bot.channels.get("459330018791784459").setName(`🔴🔴🔴🔴🔴🔴🔴`);
-              bot.channels.get("459331426547138560").setName(`http://bit.ly/ustayt`);
-              bot.channels.get("459331793548738583").setName(`http://atakanusta.tk`);
-              bot.channels.get("459331697654366219").setName(`http://bit.ly/ustadc`);
-              bot.channels.get("459330034377687060").setName(`🔴🔴🔴🔴🔴🔴🔴`);
-              
-            atnkanal3();
-          }, 10000);
-        });
-    }
-
-    function atnkanal3() {
-        return new Promise(resolve => {
-          setTimeout(() => {
-            
-                            bot.channels.get("459330018791784459").setName(`⚫⚫⚫⚫⚫⚫⚫`);
-              bot.channels.get("459331426547138560").setName(`Atakan Usta`);
-              bot.channels.get("459331793548738583").setName(`Serverine`);
-              bot.channels.get("459331697654366219").setName(`Hoşgeldin!`);
-              bot.channels.get("459330034377687060").setName(`⚫⚫⚫⚫⚫⚫⚫`);
-              
-            atnkanal4();
-          }, 10000);
-        });
-    }
-
-    function atnkanal4() {
-        return new Promise(resolve => {
-          setTimeout(() => {
-            
-             
-              bot.channels.get("459331426547138560").setName(`Ben(Mustafa)`);
-               bot.channels.get("459330018791784459").setName(`📢 🇩🇺🇾🇺🇷🇺`);
-              bot.channels.get("459331793548738583").setName(`Yeni Bir Oyun`);
-              bot.channels.get("459331697654366219").setName(`Yapabilirim`);
-              bot.channels.get("459330034377687060").setName(`📢 🇩🇺🇾🇺🇷🇺`);
-              
-            atnkanal5();
-          }, 10000);
-        });
-    }
-
-    function atnkanal5() {
-        return new Promise(resolve => {
-          setTimeout(() => {
-            
-             
-              bot.channels.get("459331426547138560").setName(`LordBot Kısa Bir`);
-               bot.channels.get("459330018791784459").setName(`📢 🇩🇺🇾🇺🇷🇺`);
-              bot.channels.get("459331793548738583").setName(`Süre Bakıma`);
-              bot.channels.get("459331697654366219").setName(`Alındı!`);
-              bot.channels.get("459330034377687060").setName(`📢 🇩🇺🇾🇺🇷🇺`);
-              
-            atnkanal1();
+           
+            bot.channels.get("459733762234777601").setName(`${bot.guilds.size} Adet Sunucudayım`);
+            istatistik();
           }, 10000);
         });
     }
 
 
-
-
- 
 
 
     bot.on(`ready`,() => {
+        bot.user.setUsername('LordBot Beta Test');
         console.log(``);
         console.log(`#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#`);
         console.log(`|                                             |`);
@@ -160,8 +129,19 @@ function ActivityStreaming() {
         console.log(`|                                             |`);
         console.log(`#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#`);
         console.log(` | ${bot.guilds.size} Server |`);
+        
+        //functions
         ActivityStreaming();
-        atnkanal1();
+        
+
+
+
+
+
+
+
+
+
 
     });
 
@@ -174,12 +154,9 @@ function ActivityStreaming() {
         let command = messageArray[0];
         let args = messageArray.slice(1);
 
-    
-                
 
 
-        
-        
+
         
         
         
@@ -227,25 +204,37 @@ function ActivityStreaming() {
         
         
         
+
+
+
+
+        bot.on("guildMemberAdd", (member) => {
+            console.log(`New User "${member.user.username}" has joined "${member.guild.name}"` );
+
+          });
+
+
+
+        bot.on(`MESSAGE_CREATE`, (message) => {
+
         
-                                //public botta kalkacak!
-        
-                                        if(message.content === 'mvo!profil') {
-            message.reply("mvo!profil Bu Sunucuda Bir İşe Yaramaz Level Rolleri !rank Komutundaki Seviyenize Bağlıdır ");
-        }
-                                                if(message.content === 'MVO!profil') {
-            message.reply("mvo!profil Bu Sunucuda Bir İşe Yaramaz Level Rolleri !rank Komutundaki Seviyenize Bağlıdır ");
-        }
-        
-        
-        
+        });
+
+        console.log(`[LordLog] ${message.author.username} | ${message.channel}   :   ${message.content}`)
+
+
+
+
+
+                //
+                //      Yukarıda
+                //  Hatalı Kodlama Olabilir 
+                //
+                //
+
+
 
  
-
-//Serverdaki Küfür Yasağı **KISITLI** Şekildede Olsa Kaldırılsınmı ? 
-
-
-
 
 
         let commandfile = bot.commands.get(command.slice(prefix.length));
@@ -260,21 +249,12 @@ function ActivityStreaming() {
         }
 
 
+    
 
 
 
 
-
-
-
-
-
-
-
+       
     });
 
-
-
-
-
-    bot.login(process.env.TOKEN);
+    bot.login(botconfig.token);

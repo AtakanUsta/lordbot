@@ -20,6 +20,10 @@ module.exports.run = async (bot, message, args) => {
             let uyarı2 = message.guild.roles.find("name", "Uyarı 2");
             let uyarı3 = message.guild.roles.find("name", "Uyarı 3");
 
+            let uyarı1p = uyarı1.id
+            let uyarı2p = uyarı2.id
+            let uyarı3p =uyarı3.id
+            
                 //uyarı 1
             let uyarıembed1 = new Discord.RichEmbed()
             .setDescription(`${message.author.username} Adlı Yetkilinin Verdiği Uyarı`)
@@ -61,13 +65,13 @@ module.exports.run = async (bot, message, args) => {
          
 
   //3.uyarı
-  if(wUser.roles.has(uyarı3.id)) {
+  if(wUser.roles.has(uyarı3p)) {
     //sunucudan Atılır
     wUser.ban()
 }
 
                         
-                        if(wUser.roles.has(uyarı2.id)) {
+                        if(wUser.roles.has(uyarı2p)) {
                             wUser.addRole(uyarı3).catch(console.error);
                             warnchannel.send(uyarıembed3);
                 message.channel.send(uyarıembed3);
@@ -78,7 +82,7 @@ module.exports.run = async (bot, message, args) => {
   
             
             
-                            if(wUser.roles.has(uyarı1.id)) {
+                            if(wUser.roles.has(uyarı1p)) {
                                 wUser.addRole(uyarı2).catch(console.error);
                                 warnchannel.send(uyarıembed2);
                             message.channel.send(uyarıembed2);
@@ -86,7 +90,7 @@ module.exports.run = async (bot, message, args) => {
                             } 
 
 
-                            if(!wUser.roles.has(uyarı1.id)) {
+                            if(!wUser.roles.has(uyarı1p)) {
                                 wUser.addRole(uyarı1).catch(console.error);
                                 warnchannel.send(uyarıembed1);
                                 message.channel.send(uyarıembed1);

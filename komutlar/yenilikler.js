@@ -3,7 +3,7 @@ const botconfig = require("../botconfig.json");
 
 module.exports.run = async (bot, message, args) => {
 
-        //kod başlangıç
+        //kod başlangıçç
 
     
 
@@ -27,5 +27,5 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-    name: "yenilik"
+    name: "yenilikler"
 }

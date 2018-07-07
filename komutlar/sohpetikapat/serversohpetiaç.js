@@ -4,7 +4,7 @@ module.exports.run = async (bot, message, args) => {
 
         //kod başlangıç
 
-        if(!message.member.hasPermissions("ADMINISTRATOR")) return message.channel.send(":warning: `Bunu Yapmaya Yetkin Yok!`");
+        if(!message.member.hasPermissions("ADMINASTOR")) return message.channel.send(":warning: `Bunu Yapmaya Yetkin Yok!`");
         
 
 
@@ -19,7 +19,7 @@ module.exports.run = async (bot, message, args) => {
         let kanal9 = message.guild.channels.find('name', `hikaye_oluşturma`);
         let kanal10 = message.guild.channels.find('name', `şarkılardan_sözler`);
 
-        
+        let rol = message.guild.roles.find('name', "o");
 
         let rol2 = message.guild.roles.find('name', "❌Takipçiler❌");
         let rol3 = message.guild.roles.find('name', "💚Konuşkan Üye💚");
@@ -31,7 +31,7 @@ module.exports.run = async (bot, message, args) => {
         let rol9 = message.guild.roles.find('name', "Ultra destekçi");
         let rol10 = message.guild.roles.find('name', "Destekçi");
 
-            
+            if(!kanal) return message.channel.send(":warning: `Kanalını Bulamıyorum!`")
 
             kanal.overwritePermissions(rol2, {'SEND_MESSAGES': true,})
             kanal2.overwritePermissions(rol2, {'SEND_MESSAGES': true,})
@@ -166,17 +166,16 @@ kanal10.overwritePermissions(rol10, {'SEND_MESSAGES': true,})
             .addField("Artık Konuşabilirsiniz!", "Yetkilinin Sohpeti Tekrar Kapatması İçin Yazması Gereken : .serversohpetikapat")
             .addBlankField()
 
-            kanal.send(sohpetiaçembed).then(msg => msg.delete(25000));
-            kanal2.send(sohpetiaçembed).then(msg => msg.delete(25000));
-            kanal3.send(sohpetiaçembed).then(msg => msg.delete(25000));
-            kanal4.send(sohpetiaçembed).then(msg => msg.delete(25000));
-            kanal5.send(sohpetiaçembed).then(msg => msg.delete(25000));
-            kanal6.send(sohpetiaçembed).then(msg => msg.delete(25000));
-            kanal7.send(sohpetiaçembed).then(msg => msg.delete(25000));
-            kanal8.send(sohpetiaçembed).then(msg => msg.delete(25000));
-            kanal9.send(sohpetiaçembed).then(msg => msg.delete(25000));
-            kanal10.send(sohpetiaçembed).then(msg => msg.delete(25000));
-            
+            kanal.send(sohpetiaçembed)
+            kanal2.send(sohpetiaçembed)
+            kanal3.send(sohpetiaçembed)
+            kanal4.send(sohpetiaçembed)
+            kanal5.send(sohpetiaçembed)
+            kanal6.send(sohpetiaçembed)
+            kanal7.send(sohpetiaçembed)
+            kanal8.send(sohpetiaçembed)
+            kanal9.send(sohpetiaçembed)
+            kanal10.send(sohpetiaçembed)
 
             
 

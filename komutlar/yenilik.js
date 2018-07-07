@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
 
         //kod başlangıç
 
-        if(message.author.id !== botconfig.sahip) return message.channel.send(":warning: `Bunu Sadece Mustafa Eren Kullanabilir!`")
+    
 
             let icon = bot.user.avatarURL
 

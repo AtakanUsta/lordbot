@@ -257,4 +257,4 @@ bot.commands = new Discord.Collection();
        
     });
 
-    bot.login(botconfig.token);
+    bot.login(process.env.TOKEN);

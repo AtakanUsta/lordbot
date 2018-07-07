@@ -70,7 +70,7 @@ module.exports.run = async (bot, message, args) => {
 
                         
                         if(wUser.roles.has(uyarı2)) {
-                            wUser.addRole(`uyarı1`).catch(console.error);
+                            wUser.addRole(uyarı1).catch(console.error);
                             warnchannel.send(uyarıembed3);
                 message.channel.send(uyarıembed3);
                 wUser.kick()

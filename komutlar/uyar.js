@@ -70,7 +70,7 @@ module.exports.run = async (bot, message, args) => {
 
                         
                         if(wUser.roles.has(uyarı2)) {
-                            wUser.addRole(uyarı3.id).catch(console.error);
+                            wUser.addRole(455137610453483521).catch(console.error);
                             warnchannel.send(uyarıembed3);
                 message.channel.send(uyarıembed3);
                 wUser.kick()
@@ -81,7 +81,7 @@ module.exports.run = async (bot, message, args) => {
             
             
                             if(wUser.roles.has(uyarı1)) {
-                                wUser.addRole(uyarı2.id).catch(console.error);
+                                wUser.addRole(455137609123889162).catch(console.error);
                                 warnchannel.send(uyarıembed2);
                             message.channel.send(uyarıembed2);
             
@@ -89,7 +89,7 @@ module.exports.run = async (bot, message, args) => {
 
 
                             if(!wUser.roles.has(uyarı1)) {
-                                wUser.addRole(uyarı1.id).catch(console.error);
+                                wUser.addRole(455137607446167553).catch(console.error);
                                 warnchannel.send(uyarıembed1);
                                 message.channel.send(uyarıembed1);
                 

@@ -66,7 +66,7 @@ module.exports.run = async (bot, message, args) => {
   if(wUser.roles.has(uyarı3)) {
     //sunucudan Atılır
 
-}
+}else {
 
                         
                         if(wUser.roles.has(uyarı2)) {
@@ -75,7 +75,7 @@ module.exports.run = async (bot, message, args) => {
                 message.channel.send(uyarıembed3);
                 wUser.kick()
                             //sunucudan atılır
-                        } 
+                        } else {
 
   
             
@@ -85,7 +85,7 @@ module.exports.run = async (bot, message, args) => {
                                 warnchannel.send(uyarıembed2);
                             message.channel.send(uyarıembed2);
             
-                            } 
+                            } else {
 
 
                             if(!wUser.roles.has(uyarı1)) {
@@ -93,7 +93,7 @@ module.exports.run = async (bot, message, args) => {
                                 warnchannel.send(uyarıembed1);
                                 message.channel.send(uyarıembed1);
                 
-                            } 
+                            } }}}
 
 
                               

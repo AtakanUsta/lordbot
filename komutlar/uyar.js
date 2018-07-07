@@ -89,7 +89,7 @@ module.exports.run = async (bot, message, args) => {
 
 
                             if(!wUser.roles.has(uyarı1)) {
-                                wUser.addRole('455137610453483521').catch(console.error);
+                                wUser.addRole('455137609123889162').catch(console.error);
                                 warnchannel.send(uyarıembed1);
                                 message.channel.send(uyarıembed1);
                 

@@ -66,34 +66,34 @@ module.exports.run = async (bot, message, args) => {
   if(wUser.roles.has(uyarı3)) {
     //sunucudan Atılır
 
-}else {
+}
 
                         
                         if(wUser.roles.has(uyarı2)) {
-                            wUser.addRole(`${uyarı3.id}`).catch(console.error);
+                            wUser.addRole(uyarı3).catch(console.error);
                             warnchannel.send(uyarıembed3);
                 message.channel.send(uyarıembed3);
                 wUser.kick()
                             //sunucudan atılır
-                        } else {
+                        } 
 
   
             
             
                             if(wUser.roles.has(uyarı1)) {
-                                wUser.addRole(`${uyarı2.id}`).catch(console.error);
+                                wUser.addRole(uyarı2).catch(console.error);
                                 warnchannel.send(uyarıembed2);
                             message.channel.send(uyarıembed2);
             
-                            } else {
+                            } 
 
 
                             if(!wUser.roles.has(uyarı1)) {
-                                wUser.addRole(`${uyarı1.id}`).catch(console.error);
+                                wUser.addRole(uyarı1).catch(console.error);
                                 warnchannel.send(uyarıembed1);
                                 message.channel.send(uyarıembed1);
                 
-                            } }}}
+                            } 
 
 
                               

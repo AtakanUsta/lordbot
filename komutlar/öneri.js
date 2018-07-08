@@ -23,6 +23,9 @@ module.exports.run = async (bot, message, args) => {
         .addField("Öneride Bulunan Kişi", `${message.author.username}`)
         .addBlankField()
         .addField("Önerisi", `${öneri}`)
+        .addBlankField()
+        .addField("Önerim Nerde Gözüküyor?", `Önerin **https://discord.gg/eaPEC8f** Bu Serverda Öneriler Kanalında Gözükür`)
+        .addBlankField()
         
 
                 message.channel.send(embed)
